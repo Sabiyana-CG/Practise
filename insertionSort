@@ -1,0 +1,16 @@
+func insertionSort<T: Comparable>(_ array: inout [T]) {
+    let n = array.count
+    for i in 1..<n {
+        let currentElement = array[i]
+        var j = i - 1
+        while j >= 0 && array[j] > currentElement {
+            array[j + 1] = array[j]
+            j -= 1
+        }
+        array[j + 1] = currentElement
+    }
+}
+
+var numbers = [5, 3, 8, 1, 2]
+insertionSort(&numbers)
+print(numbers)  // Output: [1, 2, 3, 5, 8]
