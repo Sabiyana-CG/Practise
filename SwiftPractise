@@ -1,0 +1,56 @@
+Switch cases:
+var fruit: String? = "Strawberry"
+switch fruit{
+    case "apple":
+    print("Apple is a sweet fruit")
+    case "Strawberry":
+    print("Strawberry is a sour fruit")
+    case let x where x.hasSuffix("berry"):
+    Print("This is a berry")
+    default:
+    print("Fruit not found")
+}
+
+Optionals in Swift:
+var currentScore: Int? = 3
+if let currentScore{
+    print(currentScore)
+}
+if let score = currentScore{
+    print(score)
+}
+if currentScore == nil{
+    print("CurrentScore is nil")
+}
+let scoreEarned = if currentScore > 2{
+    print("Point Earned")
+
+Arrays & dictioanries:
+var fruits: [String]
+var fruitWithPrices: [String: Int]
+
+Dictionary with optional and keys & values fetching:
+var fruitWithPrices: [String:Int]?
+fruitWithPrices = [
+"grapes":240,
+"apple": 180]
+
+if let pricesAvailable = fruitWithPrices{
+    print("data is available \(pricesAvailable)")
+    
+    for (fruit,price) in pricesAvailable{
+    if price>200{
+        print("\(fruit) seems costly. Today it is costing \(price)")
+    }
+}
+}
+
+Dictionary with non-optional, extracting logically key,value:
+var fruitsWithPrices = [String: Int]()
+fruitsWithPrices = [
+"apple": 190,
+"grapes": 240]
+for (fruit, price) in fruitsWithPrices where fruit == "grapes"{
+    print(price)
+}
+
