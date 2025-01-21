@@ -1,4 +1,4 @@
-Switch cases:
+SWITCH
 var fruit: String? = "Strawberry"
 switch fruit{
     case "apple":
@@ -11,7 +11,9 @@ switch fruit{
     print("Fruit not found")
 }
 
-Optionals in Swift:
+
+
+OPTIONALS
 var currentScore: Int? = 3
 if let currentScore{
     print(currentScore)
@@ -24,12 +26,15 @@ if currentScore == nil{
 }
 let scoreEarned = if currentScore > 2{
     print("Point Earned")
+Optionals only can be unwrapped,
+non-optionals cannot be unwrapped
 
-Arrays & dictioanries:
+
+ARRAYS, DICTIONARIES:
 var fruits: [String]
 var fruitWithPrices: [String: Int]
 
-Dictionary with optional and keys & values fetching:
+OPTIONAL DICTIONARY, KEYS VALUES FETCHING:
 var fruitWithPrices: [String:Int]?
 fruitWithPrices = [
 "grapes":240,
@@ -45,7 +50,7 @@ if let pricesAvailable = fruitWithPrices{
 }
 }
 
-Dictionary with non-optional, extracting logically key,value:
+NON_OPTIONAL DICTIONARY, extracting logically key,value:
 var fruitsWithPrices = [String: Int]()
 fruitsWithPrices = [
 "apple": 190,
@@ -54,3 +59,6 @@ for (fruit, price) in fruitsWithPrices where fruit == "grapes"{
     print(price)
 }
 
+DEFAULT DICTIONARY KEYS:
+var a = ["b":1,"c":4]
+print(a["d", default:0])
