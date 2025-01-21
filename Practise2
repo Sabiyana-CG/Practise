@@ -1,0 +1,14 @@
+NUMBER_OF_OCCURANCES_in_Array:
+var someArray = [1,5,6,9,8,5,5,9]
+var count = [Int:Int]()
+var finalArr = [Int]()
+
+for element in someArray{
+    count[element, default:0] += 1
+    print(count)
+}
+for (key, val) in count{
+    finalArr.append(key)
+    finalArr.append(val)
+}
+print(finalArr.map{String($0)}.joined(separator:""))
