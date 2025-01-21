@@ -12,3 +12,21 @@ for (key, val) in count{
     finalArr.append(val)
 }
 print(finalArr.map{String($0)}.joined(separator:""))
+
+
+TUPLE IN PRACTISE:
+var someArray = ["a","f","a","r","e","f","a"]
+var count = [String:Int]()
+var myTuple = [Any]()
+
+for element in someArray{
+    count[element, default:0] += 1
+    print(count)
+}
+for (key, val) in count{
+    myTuple.append(key)
+    myTuple.append(String(val))
+    print(myTuple)
+}
+myTuple.map{String($0)}.joined(separator:"")
+print(myTuple)
