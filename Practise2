@@ -30,3 +30,25 @@ for (key, val) in count{
 }
 myTuple.map{String($0)}.joined(separator:"")
 print(myTuple)
+
+
+
+STRINGS,CHARACTERS:
+var str = "sample"
+print(str[str.endIndex])---crashing
+print(str[str.index(before: str.endIndex)])
+print(str[str.index(after: str.startIndex)])
+print(str[str.index(str.startIndex, offsetBy: 3)])
+
+var characterSample: Character = "c"
+var sampleCharacters:[Character] = ["d","f","h","i","k"]
+var stringSample: String = "str"
+print(sampleCharacters.count)
+print(stringSample.count)
+for eachChar in sampleCharacters{
+    print(eachChar)
+}
+for eachChar in stringSample{
+    print(eachChar)
+}
+//append function works for Strings, arrays, sequences only.
