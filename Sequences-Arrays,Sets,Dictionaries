@@ -17,3 +17,10 @@ print(copiedArray == arr) //return True
 copiedArray.append("Hey!")
 print(arr)
 print(copiedArray)
+//Iterate
+for each in arr{
+print(each)
+}
+for (key,Val) in arr.enumerated(){
+print(key,val)
+}
