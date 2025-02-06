@@ -1,0 +1,19 @@
+ARRAYS:
+//Initializations
+var emptyArray = [String]()
+var emptyArray2 = Array<String>()
+var arr = ["aa","br"]
+//Concatenations
+var addArray1 = emptyArray + arr
+addArray1 += emptyArray2
+print(addArray1)
+//Functions
+arr.insert("cd",at:2)
+arr.remove(at: 0)
+arr.append("Hello")
+//Copy
+var copiedArray = arr
+print(copiedArray == arr) //return True
+copiedArray.append("Hey!")
+print(arr)
+print(copiedArray)
