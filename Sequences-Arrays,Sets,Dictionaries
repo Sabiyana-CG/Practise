@@ -24,3 +24,35 @@ print(each)
 for (key,Val) in arr.enumerated(){
 print(key,val)
 }
+
+DICTIONARY
+//Initialization
+var dict1 = Dictionary<Int, String>()
+var dict2 = [Int:String]()
+var dict3: [Int:String] = [:]
+dict1 = [1:"one",2:"Two",3:"Three"]
+//Loop
+for (key,value) in dict1{
+    print(key,value)
+}
+for key in dict1.keys{
+    print(key)
+}
+for val in dict1.values{
+    print(val)
+}
+var allKeys = [Int](dict1.keys)
+print(allKeys)
+
+var allKey = dict1.values
+print(allKey)
+
+SETS
+//Initialization
+var sampleSet1 = Set<String>()
+var sampleSet:Set = ["a","b","v"]
+print(sampleSet.count)
+print(sampleSet.isEmpty)
+print(sampleSet.sorted())
+//Intersectio,Union,
+
